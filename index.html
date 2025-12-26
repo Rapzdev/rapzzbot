@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapzbot - AI Coding Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <h1>🤖 Rapzbot</h1>
+                <p>AI Coding Assistant dengan Deploy Automation</p>
+            </div>
+            <div class="credit-box">
+                <h3>💎 Credit: <span id="creditDisplay">10</span></h3>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hai! Saya <strong>Rapzbot</strong>, asisten coding AI anda! 👋</p>
+                    <p style="margin-top: 10px;">Saya boleh membantu anda:</p>
+                    <ul style="margin-left: 20px; margin-top: 8px;">
+                        <li>✨ Menulis dan debug code</li>
+                        <li>🎨 Membuat website</li>
+                        <li>🚀 Deploy terus ke Vercel</li>
+                        <li>💡 Menjelaskan konsep programming</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Apa yang boleh saya bantu hari ini?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="userInput" 
+                        placeholder="Tanya apa-apa tentang coding atau minta saya buat website..."
+                        rows="2"
+                    ></textarea>
+                </div>
+                <button class="send-btn" id="sendBtn">
+                    📤 Hantar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button class="sidebar-toggle" id="sidebarToggle">⚙️</button>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>⚙️ Tetapan & Info</h2>
+        </div>
+        <div class="sidebar-content">
+            <div class="section">
+                <h3>ℹ️ Tentang Rapzbot</h3>
+                <div class="info-item">
+                    <strong>Nama:</strong> Rapzbot
+                </div>
+                <div class="info-item">
+                    <strong>Dibuat oleh:</strong> Rapzz (Rafiuddin)
+                </div>
+                <div class="info-item">
+                    <strong>GitHub:</strong> rapzz88
+                </div>
+                <div class="info-item">
+                    <strong>Dibantu oleh:</strong> Claude AI
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>🎁 Redeem Code</h3>
+                <div class="redeem-input">
+                    <input type="text" id="redeemCode" placeholder="Masukkan code">
+                    <button id="redeemBtn">Redeem</button>
+                </div>
+                <div class="alert" id="redeemAlert"></div>
+                <div style="margin-top: 15px; font-size: 0.9em; color: #666;">
+                    <strong>Code tersedia:</strong><br>
+                    • Rafiensem (+5)<br>
+                    • Rafikacak (+5)<br>
+                    • Rapzz88 (+8)<br>
+                    • Nicewebsite (+10)<br>
+                    • sayangowner (+20)
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>🔑 API Keys</h3>
+                <div style="margin-bottom: 10px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Gemini API Key:</label>
+                    <input 
+                        type="password" 
+                        id="geminiKey" 
+                        placeholder="Masukkan Gemini API key"
+                        style="width: 100%; padding: 8px; border: 2px solid #e0e0e0; border-radius: 5px;"
+                    >
+                </div>
+                <div style="margin-top: 10px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Vercel Token:</label>
+                    <input 
+                        type="password" 
+                        id="vercelToken" 
+                        value="GZoCw2xrGg3hwCkKQXxO7z34"
+                        placeholder="Masukkan Vercel token"
+                        style="width: 100%; padding: 8px; border: 2px solid #e0e0e0; border-radius: 5px;"
+                    >
+                </div>
+                <button id="saveKeysBtn" style="margin-top: 10px; width: 100%; background: #00d2ff; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">
+                    💾 Simpan Keys
+                </button>
+                <div class="alert" id="keyAlert"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
